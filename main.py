@@ -1,6 +1,6 @@
 from stats import get_num_words
 from stats import get_num_chars
-from stats import get_sorted_dict
+from stats import get_sorted_dicts
 
 def get_book_text(path_to_file):
     with open(path_to_file) as f:
@@ -12,7 +12,7 @@ def main():
     book_text = get_book_text(book_link)
     book_nums = get_num_words(book_text)
     char_dict = get_num_chars(book_text)
-    sorted_dict = get_sorted_dict(char_dict)
+    sorted_dicts = get_sorted_dicts(char_dict)
     
     
     print("============ BOOKBOT ============")
@@ -20,10 +20,9 @@ def main():
     print("----------- Word Count ----------")
     print(f"Found {book_nums} total words")
     print("--------- Character Count -------")
-    for char in sorted_dict:
-        if char.isalpha():
-            num = sorted_dict[char]
-            print(f"{char}: {num}")
+    for entry in sorted_dicts:
+        if entry["char"].isalpha():
+            print(f"{entry['char']}: {entry['num']}")
     print("============= END ===============")
 
 main()
