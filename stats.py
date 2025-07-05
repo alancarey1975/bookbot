@@ -1,6 +1,11 @@
 def get_num_words(book_text):
+    # Split the input string into a list of words using whitespace as delimiter
     word_list = book_text.split()
+    
+    # Calculate the number of words by finding the length of the word list
     num_words = len(word_list)
+    
+    # Return the total number of words
     return num_words
 
 def get_num_chars(book_text):
