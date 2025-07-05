@@ -22,8 +22,8 @@ def main():
     print("--------- Character Count -------")
     for char in sorted_dict:
         if char.isalpha():
-            amount = sorted_dict[char]
-            print(f"{char}: {amount}")
+            num = sorted_dict[char]
+            print(f"{char}: {num}")
     print("============= END ===============")
 
 main()
