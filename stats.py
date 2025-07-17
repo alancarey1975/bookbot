@@ -28,12 +28,19 @@ def get_num_chars(book_text):
     return char_count
 
 def get_sorted_dicts(char_dict):
+    # Define a helper function to extract the 'num' value for sorting
     def sort_on(item):
         return item["num"]
 
+    # Initialize an empty list to store dictionaries of character counts
     sorted_dicts = []
+
+    # Convert character count dictionary to a list of dictionaries with 'char' and 'num' keys
     for key, value in char_dict.items():
         sorted_dicts.append({"char": key, "num": value})
 
+    # Sort the list by count in descending order using the sort_on function
     sorted_dicts.sort(reverse=True, key=sort_on)
+
+    # Return the sorted list of dictionaries
     return sorted_dicts
