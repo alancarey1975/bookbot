@@ -32,7 +32,7 @@ def get_sorted_dicts(char_dict):
     def sort_on(item):
         return item["num"]
 
-    # Initialize an empty list to store dictionaries of character counts
+    # Initialise an empty list to store dictionaries of character counts
     sorted_dicts = []
 
     # Convert character count dictionary to a list of dictionaries with 'char' and 'num' keys

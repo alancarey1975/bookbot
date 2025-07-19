@@ -40,7 +40,6 @@ def main():
     for entry in sorted_dicts:
         if entry["char"].isalpha():
             print(f"{entry['char']}: {entry['num']}")
-    # Print the footer for the report
     print("============= END ===============")
 
 main()
